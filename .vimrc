@@ -96,7 +96,10 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'preservim/nerdtree'
 
+
 call plug#end()
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " }}}
 
@@ -107,9 +110,6 @@ call plug#end()
 " Set default printer:       lpoptions -d <printer_name>
 " <silent> means do not display output.
 nnoremap <silent> <leader>p :%w !lp<CR>
-
-" Type jj to exit insert mode quickly.
-inoremap jj <Esc>
 
 " Press the space bar to type the : character in command mode.
 nnoremap <space> :
@@ -150,7 +150,7 @@ noremap <c-right> <c-w><
 
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
-nnoremap <F3> :NERDTreeToggle<cr>
+nnoremap <c-t> :NERDTreeToggle<cr>
 
 " Have nerdtree ignore certain files and directories.
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
