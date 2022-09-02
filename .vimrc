@@ -1,4 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""               
+
 "               
 "               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
 "               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
@@ -96,10 +97,10 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'preservim/nerdtree'
 
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
 call plug#end()
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " }}}
 
@@ -122,6 +123,9 @@ nnoremap O O<esc>
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
 nnoremap N Nzz
+
+" open FZF
+nnoremap <c-p> :FZF<CR>
 
 " Yank from cursor to the end of line.
 nnoremap Y y$
